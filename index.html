@@ -3,30 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayra Marketplace — A melhor idade merece o melhor</title>
+    <title>Ayra — Curadoria de produtos e serviços com respeito e elegância</title>
+    <meta name="description" content="Ayra Marketplace — o primeiro marketplace premium para a economia silver no Brasil. Curadoria, confiança e elegância para a melhor idade.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Ayra</div>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+
+<div id="app">
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="/" class="logo">
+                    <span class="logo-icon">
+                        <svg width="36" height="36" viewBox="0 0 100 100" fill="none">
+                            <path d="M50 5C25 5 5 25 5 50s20 45 45 45 45-20 45-45S75 5 50 5z" fill="#1E3D2F"/>
+                            <path d="M50 18c-8 0-14 6-14 14s6 14 14 14 14-6 14-14-6-14-14-14z" fill="#C8A25A" opacity="0.9"/>
+                            <path d="M38 48c0 0 4 20 12 28s12-28 12-28" stroke="#C8A25A" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            <path d="M35 58c-6 2-12 6-16 12m62-12c-4-6-10-10-16-12" stroke="#C8A25A" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+                        </svg>
+                    </span>
+                    <span class="logo-text">Ayra</span>
+                </a>
+            </div>
+            <div class="nav-center">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar produtos, serviços e marcas..." id="searchInput">
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="accessibility-controls">
+                    <button class="a-btn" id="decreaseFont" aria-label="Diminuir fonte">A-</button>
+                    <button class="a-btn active" id="increaseFont" aria-label="Aumentar fonte">A+</button>
+                    <button class="contrast-btn" id="contrastToggle" aria-label="Alto contraste">
+                        <i class="fas fa-circle-half-stroke"></i>
+                    </button>
+                </div>
+                <button class="nav-icon" aria-label="Favoritos">
+                    <i class="far fa-heart"></i>
+                </button>
+                <button class="nav-icon cart-icon" aria-label="Carrinho">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">2</span>
+                </button>
+                <button class="whatsapp-btn" aria-label="Fale conosco no WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="wpp-label">Fale conosco</span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <h1>A melhor idade merece o melhor</h1>
-            <p>Bem-vindo ao Ayra Marketplace — o primeiro marketplace premium para a economia silver no Brasil.</p>
-            <a href="#servicos" class="cta">Explorar Serviços</a>
-        </section>
-    </main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tagline">CURATED. TRUSTED. FOR YOU.</span>
+                <h1>Ayra — Curadoria de produtos e serviços com <span class="gold-text">respeito e elegância</span></h1>
+                <p class="hero-subtitle">Selecionamos com cuidado produtos, serviços, assinaturas e conteúdos que elevam o bem-estar e a qualidade de vida da melhor idade. Tudo pensado para você que merece o melhor.</p>
+                <div class="hero-ctas">
+                    <a href="#produtos" class="btn-primary">Conheça as categorias <i class="fas fa-arrow-right"></i></a>
+                    <a href="#sobre" class="btn-secondary">Conheça a Ayra <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-value-props">
+                    <div class="value-prop">
+                        <div class="vp-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="vp-text">
+                            <strong>Escolhas recorrentes</strong>
+                            <span>Assinaturas flexíveis</span>
+                        </div>
+                    </div>
+                    <div class="value-prop">
+                        <div class="vp-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="vp-text">
+                            <strong>Curadoria e confiança</strong>
+                            <span>Selecionamos para você</span>
+                        </div>
+                    </div>
+                    <div class="value-prop">
+                        <div class="vp-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <div class="vp-text">
+                            <strong>Relacionamento próximo</strong>
+                            <span>Suporte humanizado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-wrapper">
+                    <img src="images/hero-couple.jpg" alt="Casal elegante aproveitando momento especial" class="hero-img" id="heroImg" onerror="this.style.display='none'">
+                    <div class="hero-img-placeholder" id="heroPlaceholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-image"></i>
+                            <span>✨ Casal Ayra</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/main.js"></script>
+    <!-- PRODUTOS EM DESTAQUE -->
+    <section class="section section-products" id="produtos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Produtos em destaque</h2>
+                <a href="#" class="section-link">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section section-services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Serviços para facilitar sua vida</h2>
+                <a href="#" class="section-link">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="services-grid" id="servicesGrid"></div>
+        </div>
+    </section>
+
+    <!-- ASSINATURAS -->
+    <section class="section section-subscriptions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Assinaturas que encantam</h2>
+                <a href="#" class="section-link">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="subscriptions-grid" id="subscriptionsGrid"></div>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO E BLOG -->
+    <section class="section section-content">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conteúdo e blogs</h2>
+                <a href="#" class="section-link">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="content-grid" id="contentGrid"></div>
+        </div>
+    </section>
+
+    <!-- VÍDEO INSTITUCIONAL -->
+    <section class="section section-video">
+        <div class="container">
+            <div class="video-wrapper">
+                <div class="video-overlay">
+                    <div class="video-text">
+                        <span class="video-label">Ayra</span>
+                        <h2>Vídeo institucional</h2>
+                        <p>Conheça a história por trás do primeiro marketplace premium para a melhor idade no Brasil.</p>
+                    </div>
+                    <button class="video-play-btn" id="playVideo">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                <div class="video-progress">
+                    <span>0:00</span>
+                    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+                    <span>1:45</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section section-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Depoimentos de membros</h2>
+            </div>
+            <div class="testimonials-grid" id="testimonialsGrid"></div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER + FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <h3>Receba novidades exclusivas</h3>
+                    <p>Dicas, ofertas especiais e conteúdos selecionados para você.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="btn-primary">Assinar</button>
+                </form>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">
+                            <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
+                                <path d="M50 5C25 5 5 25 5 50s20 45 45 45 45-20 45-45S75 5 50 5z" fill="#C8A25A"/>
+                                <path d="M50 18c-8 0-14 6-14 14s6 14 14 14 14-6 14-14-6-14-14-14z" fill="#1E3D2F"/>
+                                <path d="M38 48c0 0 4 20 12 28s12-28 12-28" stroke="#1E3D2F" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span class="logo-text">Ayra</span>
+                    </div>
+                    <p class="footer-tagline">CURATED. TRUSTED. FOR YOU.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="#">Dicas culturais</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Sobre a Ayra</a></li>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                        <li><a href="#">Seja um parceiro</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ajuda</h4>
+                    <ul>
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">Política de trocas</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="tel:+5521999230233"><i class="fas fa-phone"></i> +21 99923-0233</a></li>
+                        <li><a href="mailto:contato@ayra.app.br"><i class="fas fa-envelope"></i> contato@ayra.app.br</a></li>
+                        <li><span class="security-badge"><i class="fas fa-lock"></i> Site seguro</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ayra Marketplace. Todos os direitos reservados.</p>
+                <div class="footer-payments">
+                    <span>Formas de pagamento</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-pix"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING -->
+    <a href="https://wa.me/5521999230233" target="_blank" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wpp-notification">2</span>
+    </a>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
