@@ -5,55 +5,35 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Ayra — Curadoria com respeito e elegância</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav class="n">
-  <div class="n-in">
-    <a href="/" class="n-logo" id="logoPlace"></a>
-    <div class="n-lk" id="navLinks"></div>
-    <div class="n-ac">
-      <button class="n-cart" id="cartToggle"><i class="fas fa-shopping-bag"></i><span id="cartCount">0</span></button>
-      <button class="n-ham" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</nav>
+<nav class="nv"><div class="nv-i"><a href="/" class="nv-l" id="logo"></a><div class="nv-m" id="menu"></div><div class="nv-r"><button class="nv-cart" id="cartBtn"><i class="fas fa-shopping-bag"></i><span id="cartNum">0</span></button><button class="nv-h" id="ham"><span></span><span></span><span></span></button></div></div></nav>
 
-<section class="hero" id="hero">
-  <div class="car" id="carousel">
-    <div class="car-tr" id="carTrack"></div>
-    <div class="car-dots" id="carDots"></div>
-    <button class="car-ar car-ar-l" id="carPrev"><i class="fas fa-chevron-left"></i></button>
-    <button class="car-ar car-ar-r" id="carNext"><i class="fas fa-chevron-right"></i></button>
-  </div>
-</section>
+<section class="hr"><div class="cr" id="car"><div class="cr-tr" id="carTr"></div><div class="cr-dots" id="carDots"></div><button class="cr-arr cr-pr" id="carPr"><i class="fas fa-chevron-left"></i></button><button class="cr-arr cr-nx" id="carNx"><i class="fas fa-chevron-right"></i></button></div></section>
 
-<section class="s" id="produtos"><div class="c"><div class="s-h"><span class="s-t">Produtos</span><h2>Mais vendidos para você</h2></div><div class="g g-3" id="prodGrid"></div></div></section>
+<section class="sec" id="produtos"><div class="c"><div class="sec-h"><span class="sec-t">Produtos</span><h2>Mais vendidos para você</h2></div><div class="g g-3" id="prodGrid"></div></div></section>
 
-<section class="s s--alt" id="servicos"><div class="c"><div class="s-h"><span class="s-t">Serviços</span><h2>Pensados para o seu bem-estar</h2></div><div class="g g-3" id="servGrid"></div></div></section>
+<section class="sec sec--alt" id="servicos"><div class="c"><div class="sec-h"><span class="sec-t">Serviços</span><h2>Pensados para o seu bem-estar</h2></div><div class="g g-3" id="servGrid"></div></div></section>
 
-<section class="s" id="assinaturas"><div class="c"><div class="s-h"><span class="s-t">Assinaturas</span><h2>Presenteie-se todo mês</h2></div><div class="g g-3" id="subGrid"></div></div></section>
+<section class="sec" id="assinaturas"><div class="c"><div class="sec-h"><span class="sec-t">Assinaturas</span><h2>Presenteie-se todo mês</h2></div><div class="g g-3" id="subGrid"></div></div></section>
 
-<section class="s s--alt" id="conteudo"><div class="c"><div class="s-h"><span class="s-t">Conteúdo</span><h2>Para inspirar seu dia</h2></div><div class="g g-3" id="contGrid"></div></div></section>
+<section class="sec sec--alt" id="conteudo"><div class="c"><div class="sec-h"><span class="sec-t">Conteúdo</span><h2>Para inspirar seu dia</h2></div><div class="g g-3" id="contGrid"></div></div></section>
 
-<section class="s"><div class="c"><div class="s-h"><span class="s-t">Depoimentos</span><h2>Quem ama, recomenda</h2></div><div class="g g-3" id="depGrid"></div></div></section>
+<section class="sec"><div class="c"><div class="sec-h"><span class="sec-t">Depoimentos</span><h2>Quem ama, recomenda</h2></div><div class="g g-3" id="depGrid"></div></div></section>
 
-<section class="nl"><div class="c"><div class="nl-b"><div><h3>Receba novidades</h3><p>Ofertas e conteúdos selecionados para você.</p></div><form id="newsForm"><input type="email" placeholder="Seu e-mail" required><button class="btn">Assinar</button></form></div></div></section>
+<section class="nl"><div class="c"><div class="nl-b"><div><h3>Receba novidades exclusivas</h3><p>Dicas, ofertas e conteúdos selecionados para você.</p></div><form id="newsForm"><input type="email" placeholder="Seu e-mail" required><button class="btn">Assinar</button></form></div></div></section>
 
-<footer class="f"><div class="c"><div class="f-g" id="footGrid"></div><div class="f-b" id="footBottom"></div></div></footer>
+<footer class="ft"><div class="c"><div class="ft-g" id="ftGrid"></div><div class="ft-b" id="ftBot"></div></div></footer>
 
-<div class="o" id="cartOverlay"></div>
-<aside class="cart" id="cartSidebar">
-  <div class="cart-h"><h3>Carrinho</h3><button id="cartClose"><i class="fas fa-times"></i></button></div>
-  <div class="cart-b" id="cartItems"></div>
-  <div class="cart-f" id="cartFoot"><div class="cart-t"><span>Total</span><span id="cartTotal">R$ 0,00</span></div><button class="btn btn--full" id="cartCheckout">Finalizar</button></div>
-</aside>
+<div class="ov" id="cartOv"></div>
+<aside class="ct" id="cartSd"><div class="ct-h"><h3>Carrinho</h3><button id="cartCl"><i class="fas fa-times"></i></button></div><div class="ct-b" id="cartIt"></div><div class="ct-f" id="cartFt"><div class="ct-t"><span>Total</span><span id="cartTot">R$ 0,00</span></div><button class="btn btn-f" id="cartChk">Finalizar pedido</button></div></aside>
 
-<div class="o" id="modalOverlay"></div>
-<div class="mo" id="modal"><button class="mo-x" id="modalClose"><i class="fas fa-times"></i></button><div class="mo-b" id="modalBody"></div></div>
+<div class="ov" id="modOv"></div>
+<div class="mo" id="mod"><button class="mo-x" id="modCl"><i class="fas fa-times"></i></button><div class="mod-b" id="modBd"></div></div>
 
 <a href="https://wa.me/5521999230233" target="_blank" class="wpp"><i class="fab fa-whatsapp"></i></a>
 
