@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Ayra — Curadoria com respeito e elegância</title>
-<meta name="description" content="Ayra — Curadoria de produtos e serviços com respeito e elegância.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231E3D2F'/><path d='M50 20C38 20 28 30 28 42s10 22 22 22 22-10 22-22-10-22-22-22z' fill='%23C8A25A' opacity='.9'/><path d='M36 52c0 0 6 24 14 32s14-32 14-32' stroke='%23C8A25A' stroke-width='4' fill='none' stroke-linecap='round'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,16 +14,8 @@
 
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="/" class="logo">
-      <svg width="30" height="30" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="20" fill="#1E3D2F"/><path d="M50 20C38 20 28 30 28 42s10 22 22 22 22-10 22-22-10-22-22-22z" fill="#C8A25A" opacity=".85"/><path d="M36 52c0 0 6 24 14 32s14-32 14-32" stroke="#C8A25A" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
-      <span class="logo-text">Ayra</span>
-    </a>
-    <div class="nav-links">
-      <a href="#produtos" class="nav-link">Produtos</a>
-      <a href="#servicos" class="nav-link">Serviços</a>
-      <a href="#assinaturas" class="nav-link">Assinaturas</a>
-      <a href="#conteudo" class="nav-link">Conteúdo</a>
-    </div>
+    <a href="/" class="logo" id="logoPlace"></a>
+    <div class="nav-links" id="navLinks"></div>
     <div class="nav-actions">
       <button class="cart-btn" id="cartToggle"><i class="fas fa-shopping-bag"></i><span class="cart-count" id="cartCount">0</span></button>
       <a href="https://wa.me/5521999230233" target="_blank" class="wpp-btn"><i class="fab fa-whatsapp"></i></a>
@@ -33,75 +24,16 @@
   </div>
 </nav>
 
-<div class="hero" id="hero">
-  <div class="carousel" id="carousel">
-    <div class="carousel-track" id="carouselTrack">
-      <div class="slide"><img src="images/hero-couple.jpg" alt="" class="slide-bg" onerror="this.style.background='#1E3D2F'"><div class="slide-overlay"></div><div class="slide-content"><span class="slide-tag">Ayra</span><h1>Curadoria de produtos e serviços com <span class="gold">respeito e elegância</span></h1><p>Selecionamos com cuidado produtos, serviços, assinaturas e conteúdos para você.</p><a href="#produtos" class="btn-primary">Explorar <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="slide"><div class="slide-bg" style="background:linear-gradient(135deg,#1E3D2F,#2D5A3E)"></div><div class="slide-overlay" style="opacity:0.2"></div><div class="slide-content"><span class="slide-tag">Assinaturas</span><h1>Receba o melhor em casa <span class="gold">todo mês</span></h1><p>Cafés especiais, flores frescas, pães e orgânicos com curadoria mensal.</p><a href="#assinaturas" class="btn-primary">Ver assinaturas <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="slide"><div class="slide-bg" style="background:linear-gradient(135deg,#2D5A3E,#1E3D2F)"></div><div class="slide-overlay" style="opacity:0.15"></div><div class="slide-content"><span class="slide-tag">Conteúdo</span><h1>Cultura, viagens e <span class="gold">entretenimento</span></h1><p>Guias, dicas e seleções especiais para você aproveitar cada momento.</p><a href="#conteudo" class="btn-primary">Ver conteúdos <i class="fas fa-arrow-right"></i></a></div></div>
-    </div>
-    <div class="dots"><button class="dot active"></button><button class="dot"></button><button class="dot"></button></div>
-    <button class="arrow prev" id="carPrev"><i class="fas fa-chevron-left"></i></button>
-    <button class="arrow next" id="carNext"><i class="fas fa-chevron-right"></i></button>
-  </div>
-</div>
+<div class="hero" id="hero"><div class="carousel" id="carousel"><div class="carousel-track" id="carouselTrack"></div><div class="dots" id="carouselDots"></div><button class="arrow prev" id="carPrev"><i class="fas fa-chevron-left"></i></button><button class="arrow next" id="carNext"><i class="fas fa-chevron-right"></i></button></div></div>
 
-<section class="section" id="produtos">
-  <div class="container">
-    <div class="sec-head"><div><span class="sec-tag">Produtos</span><h2>Mais vendidos para você</h2></div></div>
-    <div class="grid-3" id="produtosGrid"></div>
-  </div>
-</section>
+<section class="section" id="produtos"><div class="container"><div class="sec-head"><div><span class="sec-tag">Produtos</span><h2>Mais vendidos para você</h2></div></div><div class="grid-3" id="produtosGrid"></div></div></section>
+<section class="section sec-gray" id="servicos"><div class="container"><div class="sec-head"><div><span class="sec-tag">Serviços</span><h2>Pensados para o seu bem-estar</h2></div></div><div class="grid-3" id="servicosGrid"></div></div></section>
+<section class="section" id="assinaturas"><div class="container"><div class="sec-head"><div><span class="sec-tag">Assinaturas</span><h2>Presenteie-se todo mês</h2></div></div><div class="grid-3" id="assinaturasGrid"></div></div></section>
+<section class="section sec-gray" id="conteudo"><div class="container"><div class="sec-head"><div><span class="sec-tag">Conteúdo</span><h2>Para inspirar seu dia</h2></div></div><div class="grid-3" id="conteudoGrid"></div></div></section>
+<section class="section"><div class="container"><div class="sec-head"><div><span class="sec-tag">Depoimentos</span><h2>Quem ama, recomenda</h2></div></div><div class="grid-3" id="depoimentosGrid"></div></div></section>
+<section class="newsletter"><div class="container"><div class="news-box"><div><h3>Receba novidades exclusivas</h3><p>Dicas, ofertas e conteúdos selecionados para você.</p></div><form class="news-form" id="newsForm"><input type="email" placeholder="Seu e-mail" required><button class="btn-primary">Assinar</button></form></div></div></section>
 
-<section class="section sec-gray" id="servicos">
-  <div class="container">
-    <div class="sec-head"><div><span class="sec-tag">Serviços</span><h2>Pensados para o seu bem-estar</h2></div></div>
-    <div class="grid-3">
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-car"></i></div><h3>Motorista particular</h3><p>Transporte porta a porta em Santos com motoristas treinados para atender com respeito e pontualidade.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-heart-pulse"></i></div><h3>Acompanhamento de saúde</h3><p>Personal trainer e fisioterapeuta no conforto da sua casa. Profissionais selecionados para seu bem-estar.</p></div>
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-bell-concierge"></i></div><h3>Concierge pessoal</h3><p>Agendamentos, contas, compras, reservas. Seu assistente pessoal para o dia a dia.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="assinaturas">
-  <div class="container">
-    <div class="sec-head"><div><span class="sec-tag">Assinaturas</span><h2>Presenteie-se todo mês</h2></div></div>
-    <div class="grid-3" id="assinaturasGrid"></div>
-  </div>
-</section>
-
-<section class="section sec-gray" id="conteudo">
-  <div class="container">
-    <div class="sec-head"><div><span class="sec-tag">Conteúdo</span><h2>Para inspirar seu dia</h2></div></div>
-    <div class="grid-3" id="conteudoGrid"></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="sec-head"><div><span class="sec-tag">Depoimentos</span><h2>Quem ama, recomenda</h2></div></div>
-    <div class="grid-3" id="depoimentosGrid"></div>
-  </div>
-</section>
-
-<section class="newsletter">
-  <div class="container">
-    <div class="news-box"><div><h3>Receba novidades exclusivas</h3><p>Dicas, ofertas e conteúdos selecionados para você.</p></div><form class="news-form" id="newsForm"><input type="email" placeholder="Seu e-mail" required><button class="btn-primary">Assinar</button></form></div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div><svg width="28" height="28" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="20" fill="#C8A25A"/><path d="M50 20C38 20 28 30 28 42s10 22 22 22 22-10 22-22-10-22-22-22z" fill="#1E3D2F" opacity=".85"/><path d="M36 52c0 0 6 24 14 32s14-32 14-32" stroke="#C8A25A" stroke-width="4" fill="none" stroke-linecap="round"/></svg><div class="f-brand">Ayra</div><p class="f-desc">Curadoria de produtos e serviços com respeito e elegância.</p><div class="f-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
-      <div><h4>Produtos</h4><ul><li><a href="#produtos">Farmácia</a></li><li><a href="#produtos">Alimentos</a></li><li><a href="#produtos">Orgânicos</a></li></ul></div>
-      <div><h4>Serviços</h4><ul><li><a href="#servicos">Motorista</a></li><li><a href="#servicos">Saúde</a></li><li><a href="#servicos">Concierge</a></li></ul></div>
-      <div><h4>Contato</h4><ul><li><a href="tel:+5521999230233">+21 99923-0233</a></li><li><a href="mailto:contato@ayra.app.br">contato@ayra.app.br</a></li></ul></div>
-    </div>
-    <div class="f-bottom">© 2026 Ayra Marketplace. Todos os direitos reservados.</div>
-  </div>
-</footer>
+<footer class="footer"><div class="container"><div class="footer-grid" id="footerGrid"></div><div class="f-bottom" id="footerBottom"></div></div></footer>
 
 <div class="cart-overlay" id="cartOverlay"></div>
 <aside class="cart" id="cartSidebar">
