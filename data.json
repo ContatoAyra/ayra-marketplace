@@ -1,1 +1,92 @@
-
+{
+  "site": {
+    "nome": "Ayra",
+    "telefone": "+5521999230233",
+    "email": "contato@ayra.app.br"
+  },
+  "menu": [
+    { "rotulo": "Produtos", "href": "#produtos" },
+    { "rotulo": "Serviços", "href": "#servicos" },
+    { "rotulo": "Assinaturas", "href": "#assinaturas" },
+    { "rotulo": "Conteúdo", "href": "#conteudo" }
+  ],
+  "slides": [
+    {
+      "img": "images/hero-couple.jpg",
+      "titulo": "Curadoria com <span class=\"gold\">respeito</span>",
+      "texto": "Produtos e serviços selecionados para elevar seu bem-estar.",
+      "btn": "Explorar"
+    },
+    {
+      "img": "images/servico-concierge.jpg",
+      "titulo": "Assinaturas que <span class=\"gold\">cuidam</span>",
+      "texto": "Café, flores, pães e orgânicos entregues todo mês.",
+      "btn": "Ver assinaturas"
+    },
+    {
+      "img": "images/conteudo-santos.jpg",
+      "titulo": "Cultura e lazer <span class=\"gold\">para você</span>",
+      "texto": "Guias, eventos, cinema e muito mais para inspirar seu dia.",
+      "btn": "Ver conteúdos"
+    }
+  ],
+  "secoes": [
+    {
+      "id": "produtos",
+      "tag": "Produtos",
+      "titulo": "Mais vendidos para você",
+      "tipo": "produtos"
+    },
+    {
+      "id": "servicos",
+      "tag": "Serviços",
+      "titulo": "Pensados para o seu bem-estar",
+      "tipo": "servicos"
+    },
+    {
+      "id": "assinaturas",
+      "tag": "Assinaturas",
+      "titulo": "Presenteie-se todo mês",
+      "tipo": "assinaturas"
+    },
+    {
+      "id": "conteudo",
+      "tag": "Conteúdo",
+      "titulo": "Para inspirar seu dia",
+      "tipo": "conteudo"
+    }
+  ],
+  "produtos": [
+    { "id":1, "cat":"Farmácia", "nome":"Vitaminas e Suplementos", "desc":"Cálcio, vitamina D, ômega-3 e complexo B.", "preco":89.90, "img":"images/produto-farmacia.jpg" },
+    { "id":2, "cat":"Alimentos", "nome":"Pães Artesanais", "desc":"Sourdough, baguetes, croissants e quitutes.", "preco":54.90, "img":"images/produto-paes.jpg" },
+    { "id":3, "cat":"Orgânicos", "nome":"Cesta de Frutas", "desc":"Frutas da estação, verduras e orgânicos.", "preco":99.90, "img":"images/produto-cestas.jpg" },
+    { "id":4, "cat":"Farmácia", "nome":"Dermocosméticos", "desc":"Hidratantes, protetores e sachês premium.", "preco":119.90, "img":"images/produto-farmacia.jpg" },
+    { "id":5, "cat":"Bem-estar", "nome":"Kit Segurança", "desc":"Tapete, banco e barra de apoio.", "preco":159.90, "img":"images/produto-paes.jpg" },
+    { "id":6, "cat":"Alimentos", "nome":"Café Gourmet", "desc":"Cafés especiais, torra artesanal.", "preco":49.90, "img":"images/assinatura-cafe.jpg" }
+  ],
+  "servicos": [
+    { "icone":"fa-car", "titulo":"Motorista particular", "desc":"Transporte porta a porta em Santos." },
+    { "icone":"fa-heart-pulse", "titulo":"Acompanhamento de saúde", "desc":"Personal e fisioterapeuta em casa." },
+    { "icone":"fa-bell-concierge", "titulo":"Concierge pessoal", "desc":"Agendamentos, contas, compras." }
+  ],
+  "assinaturas": [
+    { "id":7, "nome":"Café da manhã", "desc":"Café gourmet, pães, geleias.", "preco":79.90, "img":"images/assinatura-cafe.jpg", "badge":"pop", "badge_txt":"Mais popular" },
+    { "id":8, "nome":"Flores em casa", "desc":"Buquês frescos toda semana.", "preco":64.90, "img":"images/assinatura-flores.jpg", "badge":"novo", "badge_txt":"Novidade" },
+    { "id":9, "nome":"Cesta de frutas", "desc":"Frutas da estação e orgânicos.", "preco":99.90, "img":"images/assinatura-frutas.jpg", "badge":"saudavel", "badge_txt":"Saudável" }
+  ],
+  "conteudos": [
+    { "cat":"Viagem", "titulo":"Santos — um passeio", "img":"images/conteudo-santos.jpg", "data":"12 jul 2026", "min":4, "html":"<p>Santos encanta em cada esquina — orla de 7 km, centro histórico, Bolsa do Café e Teatro Coliseu.</p><p>Dica Ayra: caminhe na orla no final da tarde.</p>" },
+    { "cat":"Cultura", "titulo":"Guia de eventos", "img":"images/conteudo-santos.jpg", "data":"8 jul 2026", "min":6, "html":"<p>Teatro Municipal, Sesc Santos, concertos e exposições.</p>" },
+    { "cat":"Cinema", "titulo":"Cinema em casa", "img":"images/conteudo-cinema.jpg", "data":"5 jul 2026", "min":3, "html":"<p>Clássicos: Um Sonho de Liberdade, Forrest Gump, A Vida é Bela.</p>" }
+  ],
+  "depoimentos": [
+    { "img":"images/depoimento-helena.jpg", "frase":"A Ayra tornou meu dia a dia mais prático.", "autor":"Helena Prado", "local":"Santos, SP" },
+    { "img":"images/depoimento-roberto.jpg", "frase":"Assinaturas excelentes e curadoria de primeira.", "autor":"Roberto Almeida", "local":"Santos, SP" },
+    { "img":"images/depoimento-maria.jpg", "frase":"Confio na curadoria da Ayra.", "autor":"Maria Oliveira", "local":"São Vicente, SP" }
+  ],
+  "redes": [
+    { "icone":"fa-instagram", "url":"#" },
+    { "icone":"fa-facebook-f", "url":"#" },
+    { "icone":"fa-youtube", "url":"#" }
+  ]
+}
