@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Ayra — Curadoria com respeito e elegância</title>
-<meta name="description" content="Ayra — Curadoria de produtos e serviços com respeito e elegância para a melhor idade.">
+<meta name="description" content="Ayra — Curadoria de produtos e serviços com respeito e elegância.">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,36 +18,47 @@
   <div class="nav-inner">
     <div class="nav-left">
       <a href="/" class="logo">
-        <svg class="logo-svg" width="42" height="42" viewBox="0 0 100 100" fill="none"><path d="M50 5C25 5 5 25 5 50s20 45 45 45 45-20 45-45S75 5 50 5z" fill="#1E3D2F"/><path d="M50 20c-7 0-13 6-13 13s6 13 13 13 13-6 13-13-6-13-13-13z" fill="#C8A25A" opacity=".9"/><path d="M39 48c0 0 4 18 11 26s11-26 11-26" stroke="#C8A25A" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M36 58c-5 2-10 5-14 10m56-10c-4-5-9-8-14-10" stroke="#C8A25A" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/></svg>
+        <img src="images/logo-ayra.png" alt="Ayra" class="logo-img" onerror="this.style.display='none'">
         <span class="logo-text">Ayra</span>
       </a>
     </div>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#membros" class="nav-link">Membros</a>
+      <a href="#produtos" class="nav-link">Produtos</a>
+      <a href="#servicos" class="nav-link">Serviços</a>
+      <a href="#conteudo" class="nav-link">Conteúdo</a>
+    </nav>
     <div class="nav-center">
       <div class="search-wrap">
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="Buscar produtos, serviços e marcas..." class="search-input">
+        <input type="text" placeholder="Buscar produtos, serviços e marcas..." class="search-input" id="searchInput">
       </div>
     </div>
     <div class="nav-right">
       <div class="access-group">
-        <button class="a-btn" id="fontDown">A-</button>
-        <button class="a-btn active" id="fontUp">A+</button>
-        <button class="contrast-btn" id="contrastBtn"><i class="fas fa-circle-half-stroke"></i></button>
+        <button class="a-btn" id="fontDown" aria-label="Diminuir fonte">A-</button>
+        <button class="a-btn active" id="fontUp" aria-label="Aumentar fonte">A+</button>
+        <button class="contrast-btn" id="contrastBtn" aria-label="Alto contraste"><i class="fas fa-circle-half-stroke"></i></button>
       </div>
-      <button class="icon-btn" aria-label="Favoritos"><i class="far fa-heart"></i></button>
-      <button class="icon-btn cart-btn" aria-label="Carrinho"><i class="fas fa-shopping-bag"></i><span class="cart-count">2</span></button>
-      <a href="https://wa.me/5521999230233" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp"></i><span>Fale conosco</span></a>
+      <button class="icon-btn" id="cartToggle" aria-label="Carrinho"><i class="fas fa-shopping-bag"></i><span class="cart-count" id="cartCount">0</span></button>
+      <a href="https://wa.me/5521999230233" target="_blank" class="btn-wpp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span>Fale conosco</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
+<!-- BREADCRUMB -->
+<div class="breadcrumb" id="breadcrumb">
+  <div class="container"><span class="bc-item active">Início</span></div>
+</div>
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="membros">
   <div class="hero-inner">
     <div class="hero-text">
       <span class="hero-tag">CURATED. TRUSTED. FOR YOU.</span>
       <h1>Ayra — Curadoria de produtos e serviços com <span class="gold">respeito e elegância</span></h1>
-      <p class="hero-desc">Selecionamos com cuidado produtos, serviços, assinaturas e conteúdos que elevam o bem-estar e a qualidade de vida da melhor idade. Tudo pensado para você que merece o melhor.</p>
+      <p class="hero-desc">Selecionamos com cuidado produtos, serviços, assinaturas e conteúdos que elevam o bem-estar e a qualidade de vida. Tudo pensado para você que merece o melhor.</p>
       <div class="hero-actions">
         <a href="#produtos" class="btn-primary">Conheça as categorias <i class="fas fa-arrow-right"></i></a>
         <a href="#sobre" class="btn-outline">Conheça a Ayra <i class="fas fa-arrow-right"></i></a>
@@ -60,7 +72,7 @@
     <div class="hero-visual">
       <div class="hero-img-wrap">
         <img src="images/hero-couple.jpg" alt="Casal Ayra" class="hero-img" id="heroImg">
-        <div class="hero-placeholder" id="heroPlaceholder"><i class="fas fa-image"></i><span>✨ Casal Ayra</span></div>
+        <div class="hero-placeholder" id="heroPlaceholder"><i class="fas fa-image"></i><span>Casal Ayra</span></div>
       </div>
     </div>
   </div>
@@ -73,29 +85,29 @@
       <h2>Produtos em destaque</h2>
       <a href="#" class="sec-link">Ver todos <i class="fas fa-arrow-right"></i></a>
     </div>
-    <div class="grid-3">
-      <div class="card">
+    <div class="grid-3" id="produtosGrid">
+      <div class="card" data-id="1" data-name="Farmácia e produtos de higiene" data-price="89.90" data-img="images/produto-farmacia.jpg">
         <img src="images/produto-farmacia.jpg" alt="Farmácia e higiene" class="card-img" onerror="this.style.display='none'">
         <div class="card-body">
           <h3>Farmácia e produtos de higiene</h3>
           <p>Medicamentos, vitaminas, dermocosméticos e produtos de cuidado pessoal com entrega recorrente.</p>
-          <div class="card-foot"><span class="price">R$ 89,90</span><button class="btn-sm">Adicionar</button></div>
+          <div class="card-foot"><span class="price">R$ 89,90</span><button class="btn-sm add-cart">Adicionar</button></div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-id="2" data-name="Bolos e pães fresquinhos" data-price="54.90" data-img="images/produto-paes.jpg">
         <img src="images/produto-paes.jpg" alt="Bolos e pães" class="card-img" onerror="this.style.display='none'">
         <div class="card-body">
           <h3>Bolos e pães fresquinhos</h3>
           <p>Pães artesanais, bolos caseiros e quitutes entregues fresquinhos toda semana na sua casa.</p>
-          <div class="card-foot"><span class="price">R$ 54,90</span><button class="btn-sm">Adicionar</button></div>
+          <div class="card-foot"><span class="price">R$ 54,90</span><button class="btn-sm add-cart">Adicionar</button></div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-id="3" data-name="Cestas de mantimentos essenciais" data-price="129.90" data-img="images/produto-cestas.jpg">
         <img src="images/produto-cestas.jpg" alt="Cestas essenciais" class="card-img" onerror="this.style.display='none'">
         <div class="card-body">
           <h3>Cestas de mantimentos essenciais</h3>
           <p>Cestas básicas premium com itens selecionados, ideais para manter a despensa sempre abastecida.</p>
-          <div class="card-foot"><span class="price">R$ 129,90</span><button class="btn-sm">Adicionar</button></div>
+          <div class="card-foot"><span class="price">R$ 129,90</span><button class="btn-sm add-cart">Adicionar</button></div>
         </div>
       </div>
     </div>
@@ -146,31 +158,34 @@
       <a href="#" class="sec-link">Ver todos <i class="fas fa-arrow-right"></i></a>
     </div>
     <div class="grid-3">
-      <div class="card-sub">
+      <div class="card-sub" data-id="4" data-name="Café da manhã especial" data-price="79.90" data-img="images/assinatura-cafe.jpg">
         <img src="images/assinatura-cafe.jpg" alt="Café da manhã" onerror="this.style.display='none'">
         <div class="card-sub-body">
           <span class="sub-badge pop">Mais popular</span>
           <h3>Café da manhã especial todo mês</h3>
           <p>Café gourmet, pães artesanais, geleias e quitutes selecionados chegando todo mês.</p>
           <span class="sub-price">R$ 79,90 <small>/mês</small></span>
+          <button class="btn-sm add-cart" style="margin-top:12px;width:100%">Assinar</button>
         </div>
       </div>
-      <div class="card-sub">
+      <div class="card-sub" data-id="5" data-name="Flores em casa" data-price="64.90" data-img="images/assinatura-flores.jpg">
         <img src="images/assinatura-flores.jpg" alt="Flores" onerror="this.style.display='none'">
         <div class="card-sub-body">
           <span class="sub-badge novo">Novidade</span>
           <h3>Flores em casa</h3>
           <p>Buquês frescos e arranjos exclusivos entregues semanalmente para alegrar seus ambientes.</p>
           <span class="sub-price">R$ 64,90 <small>/semana</small></span>
+          <button class="btn-sm add-cart" style="margin-top:12px;width:100%">Assinar</button>
         </div>
       </div>
-      <div class="card-sub">
+      <div class="card-sub" data-id="6" data-name="Cesta de frutas e orgânicos" data-price="99.90" data-img="images/assinatura-frutas.jpg">
         <img src="images/assinatura-frutas.jpg" alt="Frutas e orgânicos" onerror="this.style.display='none'">
         <div class="card-sub-body">
           <span class="sub-badge saudavel">Saudável</span>
           <h3>Cesta de frutas e orgânicos</h3>
           <p>Frutas da estação, verduras e orgânicos direto do produtor para sua mesa.</p>
           <span class="sub-price">R$ 99,90 <small>/semana</small></span>
+          <button class="btn-sm add-cart" style="margin-top:12px;width:100%">Assinar</button>
         </div>
       </div>
     </div>
@@ -178,14 +193,14 @@
 </section>
 
 <!-- CONTEÚDO -->
-<section class="section sec-alt">
+<section class="section sec-alt" id="conteudo">
   <div class="container">
     <div class="sec-head">
       <h2>Conteúdo e blogs</h2>
       <a href="#" class="sec-link">Ver todos <i class="fas fa-arrow-right"></i></a>
     </div>
     <div class="grid-3">
-      <div class="card-content">
+      <div class="card-content" data-content="santos">
         <img src="images/conteudo-santos.jpg" alt="Santos" onerror="this.style.display='none'">
         <div class="cc-body">
           <span class="tag">Viagem</span>
@@ -194,16 +209,16 @@
           <div class="cc-meta"><span>12 jul 2026</span><span>·</span><span>4 min de leitura</span></div>
         </div>
       </div>
-      <div class="card-content">
-        <div class="cc-img-placeholder"><i class="fas fa-masks-theater"></i><span>Guia cultural</span></div>
+      <div class="card-content" data-content="teatro">
+        <img src="images/conteudo-teatro.jpg" alt="Guia cultural" onerror="this.style.display='none'">
         <div class="cc-body">
           <span class="tag">Cultura</span>
-          <h3>Guia de eventos e cultura para a melhor idade</h3>
+          <h3>Guia de eventos e cultura</h3>
           <p>Teatros, concertos, exposições e programação cultural imperdível.</p>
           <div class="cc-meta"><span>8 jul 2026</span><span>·</span><span>6 min de leitura</span></div>
         </div>
       </div>
-      <div class="card-content">
+      <div class="card-content" data-content="cinema">
         <img src="images/conteudo-cinema.jpg" alt="Cinema" onerror="this.style.display='none'">
         <div class="cc-body">
           <span class="tag">Entretenimento</span>
@@ -226,7 +241,7 @@
         <p>Conheça a história por trás do primeiro marketplace premium para a melhor idade no Brasil.</p>
         <button class="play-btn" id="playBtn"><i class="fas fa-play"></i></button>
       </div>
-      <div class="video-progress"><span>0:00</span><div class="pbar"><div class="pfill" id="pfill"></div></div><span>1:45</span></div>
+      <div class="video-progress"><span id="timeCurrent">0:00</span><div class="pbar"><div class="pfill" id="pfill"></div></div><span id="timeTotal">1:45</span></div>
     </div>
   </div>
 </section>
@@ -279,10 +294,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="f-brand">
-        <div class="logo f-logo">
-          <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><path d="M50 5C25 5 5 25 5 50s20 45 45 45 45-20 45-45S75 5 50 5z" fill="#C8A25A"/><path d="M50 20c-7 0-13 6-13 13s6 13 13 13 13-6 13-13-6-13-13-13z" fill="#1E3D2F"/><path d="M39 48c0 0 4 18 11 26s11-26 11-26" stroke="#1E3D2F" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
-          <span class="logo-text f-logo-text">Ayra</span>
-        </div>
+        <img src="images/logo-ayra.png" alt="Ayra" class="f-logo-img" onerror="this.style.display='none'">
         <p class="f-tagline">CURATED. TRUSTED. FOR YOU.</p>
         <div class="f-social">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -291,7 +303,7 @@
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-      <div class="f-col"><h4>Navegação</h4><ul><li><a href="#produtos">Produtos</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#">Assinaturas</a></li><li><a href="#">Dicas culturais</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div class="f-col"><h4>Navegação</h4><ul><li><a href="#membros">Membros</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#conteudo">Conteúdo</a></li></ul></div>
       <div class="f-col"><h4>Institucional</h4><ul><li><a href="#">Sobre a Ayra</a></li><li><a href="#">Como funciona</a></li><li><a href="#">Trabalhe conosco</a></li><li><a href="#">Seja um parceiro</a></li></ul></div>
       <div class="f-col"><h4>Ajuda</h4><ul><li><a href="#">Central de ajuda</a></li><li><a href="#">Política de trocas</a></li><li><a href="#">Privacidade</a></li><li><a href="#">Termos de uso</a></li></ul></div>
       <div class="f-col"><h4>Contato</h4><ul><li><a href="tel:+5521999230233"><i class="fas fa-phone"></i> +21 99923-0233</a></li><li><a href="mailto:contato@ayra.app.br"><i class="fas fa-envelope"></i> contato@ayra.app.br</a></li><li><span class="f-secure"><i class="fas fa-lock"></i> Site seguro</span></li></ul></div>
@@ -303,8 +315,26 @@
   </div>
 </footer>
 
+<!-- CARRINHO SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h3>Carrinho</h3><button id="cartClose" aria-label="Fechar"><i class="fas fa-times"></i></button></div>
+  <div class="cart-items" id="cartItems"><p class="cart-empty">Seu carrinho está vazio.</p></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+    <button class="btn-primary" style="width:100%;justify-content:center" id="cartCheckout">Finalizar compra</button>
+  </div>
+</aside>
+
+<!-- MODAL CONTEÚDO -->
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="modal-content" id="modalContent">
+  <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+  <div id="modalBody"></div>
+</div>
+
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/5521999230233" target="_blank" class="wpp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="wpp-ntf">2</span></a>
+<a href="https://wa.me/5521999230233" target="_blank" class="wpp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
 <script src="js/main.js"></script>
 </body>
